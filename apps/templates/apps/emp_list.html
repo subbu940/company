@@ -1,0 +1,17 @@
+{% if emp_list %}
+<ul>
+    {% for e in emp_list%}
+        <li><a href="{% url 'apps:about_emp' e.id %}">{{ e.name }}</a> ||-----||<a href="{% url 'apps:delete' e.id %}">
+            <input type="submit" value="Delete"></a> </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h4>No Employees are available </h4>
+{% endif %}
+<br><br><br><br>
+<a href="{% url 'apps:create_emp' %}">Add-New-Employee</a>
+<br><br><br>
+<a href="{% url 'apps:index' %}"> HOME </a>
+<br><br>
+<br>
+<a href="{% url 'apps:logout' %}"><input type="submit" value="Logout"></a>

@@ -1,0 +1,16 @@
+<h3>Details for {{pro.project_name }}</h3>
+<br>
+Project-Name : {{pro.project_name}}<br>
+Project-Description : {{pro.project_description}}<br>
+Start-Date : {{pro.start_date}}<br>
+End-Date :  {{pro.end_date}}<br>
+Image :<br> <img src="/media/{{pro.project_image}}" alt="GoogleImage" height="150" width="300">
+
+<br><br><br>
+<a href="">Employees List</a><br><br>
+<a href="{% url 'apps:projects' %}">BACK</a>
+<br><br>
+<a href="{% url 'apps:index' %}">HOME</a>
+<br><br>
+<br>
+<a href="{% url 'apps:logout' %}"><input type="submit" value="Logout"></a>

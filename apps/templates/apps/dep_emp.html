@@ -1,0 +1,17 @@
+<h2>Employees for {{ dep.department_name }} section</h2>
+
+{% if dep_emp %}
+<ul>
+    {% for e in dep_emp %}
+        <li>{{ e.name }} -- {{e.salary}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h4> No Employees are available </h4>
+{% endif %}
+
+<br><br>
+<a href="{% url 'apps:index' %}"> HOME </a>
+<br><br>
+<br>
+<a href="{% url 'apps:logout' %}"><input type="submit" value="Logout"></a>

@@ -1,0 +1,13 @@
+{% if error %}
+    <p>{{error}}</p>
+{% else %}
+    <form action="." method="post">
+        {% csrf_token %}
+        Username : <input name="username" type="text"><br>
+        Password : <input name="password" type="password"><br>
+        <input type="submit" value="LOGIN">
+    </form>
+{% endif %}
+
+<br><br>
+<a href="{% url 'apps:reg' %}"><input type="submit" value="REGISTER"></a>

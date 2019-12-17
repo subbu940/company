@@ -1,0 +1,14 @@
+
+<h2>Create New-Project</h2>
+
+<form action="." method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Project-Name : <input name="project-name" type="text"><br>
+    Project-Description : <input name="project-description" type="text"><br>
+    Start-Date : <input name="start-date" type="date"><br>
+    End-Date : <input name="end-date" type="date"><br>
+    Project-Image : <input name="image" type="file"><button type="submit">Upload</button><br>
+    <input type="submit" value="CREATE-PROJECT">
+</form>
+
+<a href="{% url 'apps:projects' %}">BACK</a>s

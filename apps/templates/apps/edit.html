@@ -1,0 +1,12 @@
+<form action="" method="post">
+    {% csrf_token %}
+    Name : <input name="name" type="text" value="{{ emp.name }}"><br>
+    Email : <input name="email" type="text" value="{{ emp.email }}"><br>
+    Mobile_no : <input name="mobile_no" type="text" value="{{emp.mobile_no}}"><br>
+    Experience: <input name="experience" type="text" value="{{ emp.experience }}"><br>
+    Salary : <input name="salary" type="text" value="{{emp.salary}}"><br>
+    <input type="submit" value="Save">
+</form>
+
+<a href="{% url 'apps:about_emp' emp.id %}">BACK</a>
+

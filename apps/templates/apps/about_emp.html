@@ -1,0 +1,18 @@
+
+Employee_id : 11230{{ emp.id }}<br>
+Employee_Name : {{ emp.name }}<br>
+Email : {{ emp.email }}<br>
+Mobile_no : +91{{ emp.email }}<br>
+Date of Birth : {{ emp.dob }}<br>
+Qualification : {{ emp.qualification }}<br>
+Experience : {{ emp.experience }}<br>
+Salary : Rs.{{emp.salary}}<br>
+Department : {{emp.department}}<br>
+Image : <br><img src="/media/{{emp.image}}" alt="Employee-image" height="150" width="300"><br><br><br><br>
+
+<a href="{% url 'apps:index' %}">BACK</a> ||||||||
+<a href="{% url 'apps:edit' emp.id %}"> EDIT-DETAILS </a><br>
+<a href="{% url 'apps:index' %}"> HOME </a>
+<br><br>
+<br>
+<a href="{% url 'apps:logout' %}"><input type="submit" value="Logout"></a>

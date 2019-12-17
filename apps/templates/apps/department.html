@@ -1,0 +1,12 @@
+{% if dept%}
+<ul>
+    {% for d in dept%}
+    <li><a href="{% url 'apps:dep_emp' d.id%}"> {{d.department_name}}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+No Departments are available
+{% endif %}
+
+<br><br>
+<a href="{% url 'apps:index' %}"> HOME </a>

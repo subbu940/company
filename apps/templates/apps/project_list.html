@@ -1,0 +1,17 @@
+{% if projects_list %}
+<ul>
+    {% for pro in projects_list %}
+    <li><a href="{% url 'apps:project-details' pro.id %}">{{ pro.project_name }}</a></li>
+    {% endfor %}
+</ul>
+{% else%}
+ <h3> No Projects Are There</h3>
+{% endif %}
+
+<a href="{% url 'apps:create-project' %}">Add Project</a>
+
+<br><br>
+<a href="{% url 'apps:index' %}"> HOME </a>
+<br><br>
+<br>
+<a href="{% url 'apps:logout' %}"><input type="submit" value="Logout"></a>
